@@ -3,9 +3,8 @@ pipeline {
 triggers {
   cron '* * * * *'
 }
- 
-}		
-stages {
+ 	
+	stages {
 	    stage('Checkout') {
 	        steps {
 			checkout scm			       
