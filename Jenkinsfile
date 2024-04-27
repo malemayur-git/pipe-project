@@ -1,9 +1,11 @@
 pipeline {
-	agent any 
+	agent any
 triggers {
-  pollSCM '* * * * *'
+  cron '* * * * *'
 }
-		stages {
+ 
+}		
+stages {
 	    stage('Checkout') {
 	        steps {
 			checkout scm			       
