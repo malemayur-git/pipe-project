@@ -3,7 +3,7 @@ pipeline {
 triggers {
   pollSCM '* * * * *'
 }
- 	
+slackSend channel: 'Ramtek', color: 'Good', message: 'This is first slack message', teamDomain: 'Student', tokenCredentialId: 'slack-test' 	
 	stages {
 	    stage('Checkout') {
 	        steps {
