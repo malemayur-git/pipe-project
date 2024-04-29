@@ -14,9 +14,8 @@ parameters {
 	                 }}
 stage('Notify') { 
   steps {
-    script {
       slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'jenkins-channel', color: 'good', message: 'This is Slack integration job', teamDomain: 'Student', tokenCredentialId: 'slack-test'
-}}}
+}}
 
 		stage('Deployment'){
 		   steps {
