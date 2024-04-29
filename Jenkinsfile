@@ -12,7 +12,7 @@ parameters {
 	           steps {
 			  sh '/home/mayur/Documents/DevOps-Software/apache-maven-3.9.6/bin/mvn install'
 	                 }}
-stage('Notify') { 
+stage('Slack') { 
   steps {
       slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'jenkins-channel', color: 'good', message: 'This is Slack integration job', teamDomain: 'Student', tokenCredentialId: 'slack-test'
 }}
